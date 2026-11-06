@@ -1,10 +1,74 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ru">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles/style.css" />
+    <link rel="stylesheet" href="styles/global.css" />
+    <link rel="stylesheet" href="fonts/fonts.css" />
     <title>Оно тебе надо — аукцион вещей, в которые никто не верил</title>
   </head>
-  <body></body>
+  <body>
+    <header class="header">
+      <nav class="header__menu">
+        <ul class="header__links-list">
+          <li class="header__links-list-item">главная</li>
+          <li class="header__links-list-item">посмотреть лоты</li>
+          <li class="header__links-list-item">об аукционе</li>
+        </ul>
+      </nav>
+      <div class="header__logo">
+        <img src="images/logo-black.svg"class="header__logo-image"></img>
+      </div>
+      <address class="address">
+        <a class="header__address" href="tel:+99995555555">+9 999 555 5555</a>
+        <a class="header__address" href="mailto:info@sobaka.ge"
+          >info@sobaka.ge</a>
+        <p class="header__address">наб. Принсенграхт 263-265. Амстердам</p>
+      </address>
+    </header>
+    <main class="main">
+      <section class="cover">
+            <h1 class="cover__title">
+              <span class="word1">Оно</span> 
+              <span class="word2">тебе</span>
+              <span class="word3">надо</span> 
+              </h1>
+          <p class="cover__description">
+            Аукцион вещей, в которые никто не верил
+          </p>
+          <button class="cover__button">
+            Сделать ставку
+          </button>
+      </section>
+      <lots class="lots">
+        <h2 class="lots__title">Лоты</h2>
+          <section class="lots__field">
+              <div class="lots__item">
+                <img src="images/card-lot-01.jpg" alt="">
+                <p class="lots__item-title">1</p>
+                <p class="lots__item-text">2</p>
+              </div>
+              <div class="lots__item">
+                <img src="images/card-lot-02.jpg" alt="">
+                <p class="lots__item-title">3</p>
+                <p class="lots__item-text">4</p>
+              </div>
+              <div class="lots__item">
+                <img src="images/card-lot-03.jpg" alt="">
+                <p class="lots__item-title">5</p>
+                <p class="lots__item-text">6</p>
+              </div>
+          </section>
+          <div class="lots__footer">
+            <a href="#" class="lots__link">посмотреть больше</a>
+          </div>
+      </lots>
+      <about class="about">
+
+      </about>
+    </main>
+    <footer class="footer"></footer>
+  </body>
 </html>

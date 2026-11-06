@@ -1,1 +1,119 @@
 /* место для вашего кода */
+/* место для вашего кода */
+.header {
+  padding: 15px;
+  display: grid;
+  grid-template-columns: 1fr min-content 1fr;
+  align-items: center;
+  height: 293px;
+}
+
+.header__menu {
+}
+
+.header__links-list {
+  display: flex;
+  list-style: circle;
+  gap: 30px;
+  font-size: 18px;
+}
+
+.header__logo {
+  width: 148px;
+  height: 105px;
+}
+
+.address {
+  display: flex;
+  flex-direction: column;
+  justify-self: end;
+  font-size: 18px;
+  line-height: 24.3px;
+}
+.cover {
+  position: relative; /* опорная точка для плёнки */
+  display: grid;
+  grid-template-columns: 1fr auto; /* описание | кнопка */
+  grid-template-rows: 1fr auto; /* заголовок | нижний ряд */
+  height: 757px;
+  padding: 0 50px 50px; /* воздух по бокам и снизу */
+  background-image: url(../images/cover.jpg);
+  background-size: cover;
+  background-position: center;
+  margin-bottom: 180px;
+}
+
+/* тёмная плёнка поверх картинки */
+.cover::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+/* поднять весь контент НАД плёнкой */
+.cover > * {
+  position: relative;
+  z-index: 1;
+}
+
+.cover__title {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-areas:
+    "word1 . ."
+    ". word2 ."
+    ". word3 word3";
+  align-self: center;
+  color: #fff;
+  font-size: 100px;
+  font-weight: 700;
+  line-height: 1.15;
+  font-style: bold;
+  letter-spacing: 30%;
+  text-transform: uppercase;
+}
+
+.word1 {
+  grid-area: word1;
+  justify-self: start;
+  padding-left: 30px;
+  padding-top: 20px;
+}
+.word2 {
+  grid-area: word2;
+  padding-top: 20px;
+  justify-self: center;
+}
+.word3 {
+  grid-area: word3;
+  justify-self: start;
+  padding-left: 282.5px;
+  padding-top: 20px;
+}
+
+.cover__description {
+  justify-self: start;
+  align-self: center;
+  color: #fff;
+  font-size: 22px;
+  line-height: 28px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  word-spacing: 5px;
+}
+
+.cover__button {
+  justify-self: end;
+  align-self: center;
+  padding: 12px 32px;
+  border: 1px solid #fff;
+  background-color: transparent;
+  color: #fff;
+  font: inherit;
+  font-size: 22px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
